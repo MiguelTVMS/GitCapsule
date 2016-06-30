@@ -5,7 +5,7 @@
             "name": "Test All",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/testAll.js",
+            "program": "${workspaceRoot}/test/testAll.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",

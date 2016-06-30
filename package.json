@@ -1,6 +1,6 @@
 {
   "name": "gitcapsule",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Git client on nodejs",
   "main": "lib/gitcapsule.js",
   "scripts": {
@@ -20,10 +20,13 @@
     "git",
     "versioning",
     "scm"
-  ],
-  "author": "João Miguel Marques Silva",
+  ],"directories": {
+      "lib": "lib",
+      "test": "test"
+  },
+  "author": "João Miguel Marques Silva <joao@miguel.ms> (http://www.miguel.ms)",
   "contributors": [
-    "João Miguel Marques Silva <joao@miguel.ms>"
+    "João Miguel Marques Silva <joao@miguel.ms> (http://www.miguel.ms)"
   ],
   "license": "GPL-3.0",
   "dependencies": {}

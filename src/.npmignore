@@ -1,7 +1,0 @@
-.vscode
-productMessages.json
-jsconfig.json
-*.tgz
-.npmignore
-typings*
-*.log
