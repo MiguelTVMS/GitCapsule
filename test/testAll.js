@@ -5,7 +5,7 @@ var repositoryOptions = {
 }
 
 var gitRepository = gitCapsule.createGitRepository("/repo/testAll", repositoryOptions)
-gitRepository.on("cloned", function (path) {
+gitRepository.on("cloned", function (data) {
     var latestCommit = "";
     gitRepository.fetch(function (error, data) {
         if (error !== null) {
@@ -13,22 +13,26 @@ gitRepository.on("cloned", function (path) {
             process.abort();
         }
 
-        gitRepository.pull(function (error, data) {
+        gitRepository.checkout("develop");
+    });
+});
+
+gitRepository.on("checkedout", function (data) {
+    gitRepository.pull(function (error, data) {
+        if (error !== null) {
+            console.error(error.toString());
+            process.abort();
+        }
+
+        gitRepository.getLatestCommit(function (error, data) {
             if (error !== null) {
                 console.error(error.toString());
                 process.abort();
             }
 
-            gitRepository.getLatestCommit(function (error, data) {
-                if (error !== null) {
-                    console.error(error.toString());
-                    process.abort();
-                }
-
-                latestCommit = data.commit;
-                console.log("Latest commit: " + latestCommit);
-                process.exit();
-            })
+            latestCommit = data.commit;
+            console.log("Latest commit: " + latestCommit);
+            process.exit();
         })
     });
 });
