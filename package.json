@@ -1,6 +1,6 @@
 {
   "name": "gitcapsule",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Git client on nodejs",
   "main": "lib/index.js",
   "scripts": {
