@@ -28,7 +28,7 @@ var repositoryOptions = {
 }
 
 var gitRepository = gitCapsule.createGitRepository("/repo/testAll", repositoryOptions)
-gitRepository.on("cloned", function (path) {
+gitRepository.on("cloned", function (data) {
     var latestCommit = "";
     gitRepository.fetch(function (error, data) {
         if (error !== null) {
