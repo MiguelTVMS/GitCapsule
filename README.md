@@ -87,21 +87,21 @@ Those are the available events on the GitRepository. Those events may be used in
 Those responses are passes on the callback or event functions
 * _**baseResponse**_ - All responses derive from this response and have this fieds available.
     * The responses **cloneResponse**, **fetchResponse** and **checkoutResponse** are exactly equal to _baseResponse_.
-```typescript
+```javascript
 {
     raw: string; //The raw output from the git CLI
     lines: string[]; //The output from the git CLI splited in lines.
 }
 ```
 * _**pullResponse**_
-```typescript
+```javascript
 {
     //...baseResponse fields...
      alreadyUpToDate: boolean; //If the local repository is already up to date with the remote.
 }
 ```
 * _**latestCommitResponse**_
-```typescript
+```javascript
 {
     //...baseResponse fields...
      commit: string; //The hash that identify the HEAD commit.
