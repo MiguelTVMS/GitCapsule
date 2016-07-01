@@ -9,3 +9,7 @@
 
 #Typings for nodejs intellisense in Visual Studio Code
 typings*
+*.d.ts
+
+#gitEye file
+/.project

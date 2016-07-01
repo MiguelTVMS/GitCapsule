@@ -1,8 +1,8 @@
 {
   "name": "gitcapsule",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Git client on nodejs",
-  "main": "lib/gitcapsule.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,22 +12,25 @@
   },
   "homepage": "https://github.com/jmtvms/GitCapsule",
   "bugs": {
-      "email": "gitcapsule@miguel.ms",
-      "url": "https://github.com/jmtvms/GitCapsule/issues"
+    "email": "gitcapsule@miguel.ms",
+    "url": "https://github.com/jmtvms/GitCapsule/issues"
   },
   "keywords": [
     "client",
     "git",
     "versioning",
     "scm"
-  ],"directories": {
-      "lib": "lib",
-      "test": "test"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   },
   "author": "João Miguel Marques Silva <joao@miguel.ms> (http://www.miguel.ms)",
   "contributors": [
     "João Miguel Marques Silva <joao@miguel.ms> (http://www.miguel.ms)"
   ],
   "license": "GPL-3.0",
-  "dependencies": {}
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  }
 }

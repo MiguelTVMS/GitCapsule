@@ -15,7 +15,28 @@
                 "--nolazy"
             ],
             "env": {
-                "NODE_DEBUG": "gitcontrol",
+                "NODE_DEBUG": "gitcapsule",
+                "NODE_ENV": "development"
+            },
+            "externalConsole": false,
+            "sourceMaps": false,
+            "outDir": null
+        },
+        {
+            "name": "Test Pull",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/test/testPull.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_DEBUG": "gitcapsule",
                 "NODE_ENV": "development"
             },
             "externalConsole": false,
