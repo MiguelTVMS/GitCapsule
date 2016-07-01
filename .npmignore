@@ -13,3 +13,6 @@ typings*
 
 #gitEye file
 /.project
+
+#travis compilation information
+*.yml
