@@ -4,5 +4,4 @@ node_js:
   - "4"
   - "5"
 env:
-  - NODE_DEBUG=gitcapsule
-  - NODE_ENV=build
+  - NODE_DEBUG=gitcapsule NODE_ENV=build
