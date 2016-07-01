@@ -1,4 +1,3 @@
-/// <reference path="../typings/index.d.ts" />
 /// <reference path="gitcapsuleerrors.d.ts" />
 /// <reference path="gitrepository.d.ts" />
 
@@ -18,4 +17,3 @@ declare module gitcapsule {
 declare module "gitcapsule" {
     export = gitcapsule;
 }
-
