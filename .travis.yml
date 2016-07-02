@@ -21,5 +21,6 @@ node_js:
   - "6.1"
 
 env:
-  - NODE_ENV=release
-  - NODE_DEBUG=gitcapsule NODE_ENV=development
+  - NODE_DEBUG=gitcapsule
+#  - NODE_ENV=release
+#  - NODE_DEBUG=gitcapsule NODE_ENV=development
