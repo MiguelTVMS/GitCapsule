@@ -77,11 +77,11 @@ gitRepository.clone("https://github.com/jmtvms/GitCapsule.git");
 ### Available events
 Those are the available events on the GitRepository. Those events may be used in place of the callback functions, since those are optional.
 * _**error**_ - When a error occurs on any command.
-* _**cloned**_ - When the **clone(sting, Function(error, cloneResponse))** function is terminated successfuly.
-* _**fetched**_ - When the **fetch(Function(error, fetchResponse))** function is terminated successfuly.
-* _**pulled**_ - When the **pull(Function(error, pullResponse))** function is terminated successfuly.
-* _**gotLatestCommit**_ - When the **getLatestCommit(Function(error, latestCommitResponse))** function is terminated successfuly.
-* _**checkedOut**_ - When the **checkout(sting, Function(error, checkoutResponse))** function is terminated successfuly.
+* _**cloned**_ - When the **clone(sting, Function(error, cloneResponse))** function is sucessfuly executed.
+* _**fetched**_ - When the **fetch(Function(error, fetchResponse))** function is sucessfuly executed.
+* _**pulled**_ - When the **pull(Function(error, pullResponse))** function is sucessfuly executed.
+* _**gotLatestCommit**_ - When the **getLatestCommit(Function(error, latestCommitResponse))** function is sucessfuly executed.
+* _**checkedOut**_ - When the **checkout(sting, Function(error, checkoutResponse))** function is sucessfuly executed.
 
 ### Responses
 Those responses are passes on the callback or event functions
