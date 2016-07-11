@@ -4,7 +4,7 @@ var repositoryOptions = {
     "prepareBasePath": true
 }
 
-var gitRepository = gitCapsule.createGitRepository("/testrepo/testall", repositoryOptions)
+var gitRepository = gitCapsule.createGitRepository("testrepo/testall", repositoryOptions)
 
 
 function fetchRespository() {
