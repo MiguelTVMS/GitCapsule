@@ -106,7 +106,7 @@ Those responses are passes on the callback or event functions
     commit: string; //The hash that identify the HEAD commit.
 }
 ```
-* _**StatusResponse**_
+* _**statusResponse**_
 ```javascript
 {
     //...baseResponse fields...
