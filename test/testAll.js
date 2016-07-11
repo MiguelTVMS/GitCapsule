@@ -4,9 +4,10 @@ var repositoryOptions = {
     "prepareBasePath": true
 }
 
-var gitRepository = gitCapsule.createGitRepository("testrepo/testall", repositoryOptions)
-gitRepository.on("cloned", function (data) {
-    var latestCommit = "";
+var gitRepository = gitCapsule.createGitRepository("/testrepo/testall", repositoryOptions)
+
+
+function fetchRespository() {
     gitRepository.fetch(function (error, data) {
         if (error !== null) {
             console.error(error.toString());
@@ -15,6 +16,10 @@ gitRepository.on("cloned", function (data) {
 
         gitRepository.checkout("develop");
     });
+}
+
+gitRepository.on("cloned", function (data) {
+    fetchRespository()
 });
 
 gitRepository.on("checkedout", function (data) {
@@ -41,4 +46,14 @@ gitRepository.on("error", function (error) {
     console.error(error.toString());
 });
 
-gitRepository.clone("https://github.com/jmtvms/GitCapsule.git");
+gitRepository.status(function (error, data) {
+    if (error !== null) {
+        console.error(error.toString());
+        process.abort();
+    }
+
+    if (data.isRepository)
+        fetchRespository();
+    else
+        gitRepository.clone("https://github.com/jmtvms/GitCapsule.git");
+})

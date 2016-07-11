@@ -21,9 +21,7 @@ This package is meant to be used by other nodejs applications and it's published
 ```
 
 #### Changes
-* More documentation.
-* _npm test_ command is now working.
-* New checkout functionality.
+* Basic support to the _git status command_.
 
 ### Examples
 This example shows a basic flow using gitcapsule
@@ -82,6 +80,7 @@ Those are the available events on the GitRepository. Those events may be used in
 * _**pulled**_ - When the **pull(Function(error, pullResponse))** function is sucessfuly executed.
 * _**gotLatestCommit**_ - When the **getLatestCommit(Function(error, latestCommitResponse))** function is sucessfuly executed.
 * _**checkedOut**_ - When the **checkout(sting, Function(error, checkoutResponse))** function is sucessfuly executed.
+* _**gotStatus**_ - When the **status(Function(error, statusResponse))** function is sucessfuly executed.
 
 ### Responses
 Those responses are passes on the callback or event functions
@@ -97,14 +96,21 @@ Those responses are passes on the callback or event functions
 ```javascript
 {
     //...baseResponse fields...
-     alreadyUpToDate: boolean; //If the local repository is already up to date with the remote.
+    alreadyUpToDate: boolean; //If the local repository is already up to date with the remote.
 }
 ```
 * _**latestCommitResponse**_
 ```javascript
 {
     //...baseResponse fields...
-     commit: string; //The hash that identify the HEAD commit.
+    commit: string; //The hash that identify the HEAD commit.
+}
+```
+* _**StatusResponse**_
+```javascript
+{
+    //...baseResponse fields...
+    isRepository: boolean; //If the folder is a git repository.
 }
 ```
 
